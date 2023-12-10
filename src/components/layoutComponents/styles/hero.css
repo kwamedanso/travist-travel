@@ -1,0 +1,176 @@
+.hero{
+    display: grid;
+    background-color: #DDEFFD;
+    text-align: center;
+    gap: 1rem;
+    line-height: 1.15;
+    border-radius: 10px;
+    padding: 1rem 1.5px;
+}
+
+h1.primary-header span{
+    color: var(--deep-blue);
+}
+
+.hero img{
+    width: 100%;
+}
+
+.trustees{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-block: 2rem;
+}
+
+.trustees-icons {
+    display: flex;
+    gap: .35em;
+}
+
+.trustees-icons svg{
+    font-size: 1.6rem;
+}
+
+.trustees-icons svg:nth-child(1){
+    color: #0A3787;
+}
+.trustees-icons svg:nth-child(2){
+    color: #086BCA;
+}.trustees-icons svg:nth-child(3){
+    color: #FF5F64;
+}
+.trustees-icons svg:nth-child(4){
+    color: #C91214;
+}
+
+
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+
+.hero-content button{
+    display: flex;
+    gap: .3rem;
+    margin-block: 1rem;
+    margin-inline: auto;
+}
+
+.hero-content button:hover svg{
+    animation: slide 1000ms linear infinite alternate;
+}
+
+.hero-background-image{
+    position: relative;
+}
+
+.hero-star-rating{
+    position: absolute;
+    left: 8%;
+    top: 8%;
+    padding: 7px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: .3rem;
+}
+
+.hero-star-rating svg, .connect-whatsapp svg, .hero-short-description svg{
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.hero-star-rating svg{
+    color: yellow;
+    /* font-size: 1.5rem; */
+}
+
+.connect-whatsapp{
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    padding: 10px;
+    background: rgba(0,0, 0, .5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+}
+
+.connect-whatsapp svg{
+    color: #31C631;
+    /* font-size: 1.5rem; */
+}
+
+.hero-short-description{
+    display: none;
+}
+
+.hero-short-description svg{
+    background-color: rgb(176, 225, 255);
+    border-radius: 50%;
+    padding: 3px;
+    color: #086BCA;
+}
+
+/* dalfjlajdlfjalsdjfalsdjflj */
+/* .hero-content .small-section-title {
+    display: none;
+} */
+
+@media screen and (min-width: 850px) {
+    .hero{
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+        padding: 3rem;
+    }
+    .trustees{
+        justify-content: start;
+    }
+    .hero-content {
+        padding-right: 15%;
+    }
+    .hero-content button{
+        margin-left: 0;
+    }
+    .hero-content .small-section-title {
+        text-align: left;
+    }
+    .hero-short-description{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        position: absolute;
+        width: 270px;
+        top: 60%;
+        left: 0;
+        background: rgba(255, 255, 255, .3);
+        backdrop-filter: blur(10px);
+        padding: 4px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    .hero-star-rating{
+        top: 40%;
+    }
+    .connect-whatsapp{
+        bottom: 40%;
+    }
+    .hero-short-description{
+        top: 70%;
+    }
+}

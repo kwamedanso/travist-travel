@@ -1,0 +1,106 @@
+.ready-yet{
+    background-color: #DDEFFD;
+    padding-top: 1rem;
+    border-radius: 10px;
+}
+
+.hot-deals ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: -4rem;
+}
+
+.hot-deals ul::-webkit-scrollbar{
+    display: none;
+}
+
+.hot-deals ul li:not(.hot-deals ul li:last-child){
+    border-right: 1px solid var(--light-blue);
+    padding-right: 1rem;
+}
+
+
+.destination-cards{
+    display: grid;
+    gap: 1rem;
+}
+
+
+.destination-img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    border-radius: 14px;
+}
+
+.destination-card{
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+    padding: 7px 7px 0;
+    flex-direction: column;
+    position: relative;
+}
+
+.destination-card:hover{
+    border: 1px solid var(--deep-blue);
+}
+
+.destination-description{
+    flex-direction: column;
+}
+
+
+
+.star-rating{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 10px;
+    font-size: .8em;
+}
+
+#star{
+    color: yellow;
+    margin-right: 2px;
+}
+.location-icon{
+    color: #a4d7ff;
+    margin-right: 5px;
+}
+
+.discover-btn{
+    padding: 7px 10px;
+    border-radius: 19px;
+    background-color: #DDEFFD;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+
+
+@media screen and (min-width: 600px) {
+    .hot-deals ul{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 999px) {
+    .destination-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .destination-cards{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

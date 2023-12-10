@@ -1,0 +1,90 @@
+.packages-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.package-item svg{
+    color: var(--light-blue);
+    font-size: 1.3rem;
+}
+
+.package-item:nth-child(1) .package-heading-title svg{
+    color: #219652;
+}
+
+.package-item:nth-child(2) .package-heading-title svg{
+    color: #098AFF;
+    /* color: #4F84AF; */
+}
+
+.package-item:nth-child(3) .package-heading-title svg{
+    color: #BDF6FF;
+}
+
+.package-heading div{
+    gap: .5rem;
+}
+
+.popularity{
+    font-size: .6rem;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    background-color: rgb(232, 243, 253);
+    padding: 5px;
+    color: var(--light-blue);
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.package-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 250px;
+    min-height: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--light-blue);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.package-item:nth-child(3) button{
+    background-color: white;
+    border: 1px solid var(--light-blue);
+}
+
+.package-item:not(.package-item:nth-child(3)) button{
+    color: white;
+}
+
+
+.package-item:nth-child(3){
+    background-color: var(--deep-blue);
+    color: white;
+}
+
+
+
+.pkg-button{
+    background-color: var(--light-blue);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+@media screen and (min-width: 600px) {
+   
+    .packages-grid{
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 470px) {
+.package-item{
+    flex-grow: .9;
+}
+}

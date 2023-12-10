@@ -1,0 +1,52 @@
+.section-padding{
+    padding: 5px;
+}
+
+.get-started{
+    background-image: url(../../../assets/images/world_map.png);
+    background-size: cover;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.get-started button{
+    display: flex;
+    margin-inline: auto;
+}
+
+.get-started button:hover{
+    border: 1px solid var(--light-blue);
+}
+
+
+.get-started button:hover svg{
+    animation: slide 1000ms linear infinite alternate;
+}
+
+
+@media screen and (min-width:600px) {
+    .section-padding{
+        margin: 0 4rem;
+    }
+    .get-started{
+        padding: 3rem 7rem;
+    }
+    .get-started h2{
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    .section-padding{
+        /* padding: 4rem 2rem 1rem 2rem; */
+    }
+
+    .get-started{
+        padding: 3rem 2rem;
+    }
+}
+
+
