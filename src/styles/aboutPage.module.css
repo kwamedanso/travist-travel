@@ -884,6 +884,9 @@
 
 /* Responsive styles for CTA and Video */
 @media (max-width: 768px) {
+  .storyContent{
+    grid-template-columns: 1fr;
+  }
   .cta {
     padding: 4rem 0;
   }
@@ -928,6 +931,13 @@
   .videoContainer {
     max-width: 100%;
   }
+}
+
+@media screen and (max-width: 650px) {
+  .heroImage{
+    display: none;
+  }
+  
 }
 
 @media (max-width: 480px) {
