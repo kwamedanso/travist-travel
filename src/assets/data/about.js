@@ -37,7 +37,7 @@ const team = [
     {
         name: "Sarah Johnson",
         role: "Founder & CEO",
-        image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e5?w=300&h=300&fit=crop&crop=face",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
         bio: "Former travel journalist with 15 years of experience exploring the world's hidden gems.",
         social: { linkedin: "#", twitter: "#", instagram: "#" }
     },
