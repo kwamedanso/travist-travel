@@ -7,7 +7,7 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, var(--light-blue) 100%);
   color: white;
   padding: 4rem 0;
   position: relative;
@@ -59,7 +59,7 @@
 
 .primaryBtn {
   background: white;
-  color: #667eea;
+  color: var(--light-blue);
   border: none;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -122,7 +122,7 @@
 }
 
 .cardIcon {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, var(--light-blue) 100%);
   color: white;
   padding: 1rem;
   border-radius: 12px;
@@ -176,7 +176,8 @@
 }
 
 .statIcon {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, var(--light-blue) 100%); */
+  background-color: var(--light-blue);
   color: white;
   width: 60px;
   height: 60px;
@@ -215,7 +216,8 @@
 }
 
 .sectionTag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, var(--light-blue) 100%); */
+  background-color: var(--light-blue);
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
@@ -350,7 +352,8 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background-color: var(--light-blue);
   border-radius: 15px 15px 0 0;
 }
 
@@ -360,7 +363,8 @@
 }
 
 .valueIcon {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background-color: var(--light-blue);
   color: white;
   width: 70px;
   height: 70px;
@@ -433,7 +437,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(102, 126, 234, 0.9);
+  background: var(--light-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,7 +476,7 @@
 }
 
 .memberRole {
-  color: #667eea;
+  color: var(--light-blue);
   font-weight: 500;
   font-size: 0.9rem;
   display: block;
@@ -517,7 +521,8 @@
   position: absolute;
   top: -15px;
   left: 2.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background-color: var(--light-blue);
   color: white;
   width: 40px;
   height: 40px;
@@ -559,4 +564,407 @@
 .authorInfo {
   display: flex;
   flex-direction: column;
+}
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, #667eea 0%, var(--light-blue) 100%);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40z'/%3E%3Cpath d='m0 40l40-40h-40z' transform='matrix(-1 0 0 1 40 0)'/%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: ctaGlow 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ctaGlow {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.3; }
+  50% { transform: rotate(180deg) scale(1.1); opacity: 0.1; }
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta .primaryBtn {
+  background: white;
+  color: #667eea;
+  font-size: 1.1rem;
+  padding: 1.25rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta .primaryBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.cta .primaryBtn:hover::before {
+  left: 100%;
+}
+
+.cta .primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: #f8f9ff;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.contact svg {
+  font-size: 1.2rem;
+  animation: phoneRing 2s ease-in-out infinite;
+}
+
+@keyframes phoneRing {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(-10deg); }
+  20% { transform: rotate(10deg); }
+}
+
+/* Video Modal */
+.videoModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+  }
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  animation: modalSlideIn 0.4s ease-out 0.1s both;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: scale(0.8) translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: rotate(90deg) scale(1.1);
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.videoWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+/* Video loading state */
+.videoWrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: videoLoading 1s linear infinite;
+  z-index: 3;
+}
+
+@keyframes videoLoading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Enhanced video button */
+.videoBtn {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.videoBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.videoBtn:hover::before {
+  left: 100%;
+}
+
+.videoBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.videoBtn svg {
+  font-size: 0.9rem;
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.videoBtn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive styles for CTA and Video */
+@media (max-width: 768px) {
+  .cta {
+    padding: 4rem 0;
+  }
+  
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+  
+  .ctaContent p {
+    font-size: 1.1rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cta .primaryBtn {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem 2rem;
+  }
+  
+  .contact {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+  
+  .videoModal {
+    padding: 1rem;
+  }
+  
+  .closeBtn {
+    top: -50px;
+    right: 10px;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .videoContainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 3rem 0;
+  }
+  
+  .ctaContent h2 {
+    font-size: 1.7rem;
+  }
+  
+  .ctaContent p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta .primaryBtn {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .contact {
+    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .videoModal {
+    padding: 0.5rem;
+  }
+  
+  .closeBtn {
+    top: -40px;
+    right: 0;
+  }
+  
+  .videoWrapper {
+    border-radius: 10px;
+    border-width: 2px;
+  }
 }
