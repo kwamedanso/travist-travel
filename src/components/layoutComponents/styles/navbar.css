@@ -1,82 +1,3 @@
-/* header{
-    height: 70px; 
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.425);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 10;
-}
-
-.header{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header .nav-logo{
-    width: 200px;
-    height: 70px;
-}
-.nav-items ul{
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-items ul li a{
-    transition: 400ms;
-    color: var(--deep-blue);
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 1rem;
-}
-
-.nav-items ul li a:hover, .nav-items ul li a.active{
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: var(--light-blue);
-    color:  white;
-}
-
-.nav-items ul li a.active{
-    font-weight: bolder;
-}
-
-.hamburger{
-    display: none;
-    cursor: pointer;
-    flex-shrink: 0;
-}
-
-
-
-@media screen and (max-width: 650px) {  
-    header{
-        box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
-    }
-    .hamburger{
-        display: block;
-        padding: 5px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
-    }
-
-    .hamburger .bars{
-        width: 25px;
-        height: 5px;
-        margin: 5px 0;
-        background-color: black;
-    }
-
-    .nav-items{
-        display: none;
-    }
-
-} */
-
-/* navbar.css */
-
 header {
     height: 70px; 
     position: sticky;
@@ -263,11 +184,13 @@ header {
         z-index: 1000;
         overflow-y: auto;
         border-radius: 15px 0 0 0;
+        display: none;
     }
 
     .nav-items.show {
         transform: translateX(0);
         animation: slideIn 0.3s ease forwards;
+        display: block;
     }
 
     .nav-items ul {
