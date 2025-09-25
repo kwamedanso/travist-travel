@@ -5,6 +5,7 @@ import Navbar from "./components/layoutComponents/Navbar";
 import '/'
 import Footer from "./components/layoutComponents/Footer";
 import Home from "./pages/Home";
+import DestinationDetails from "./pages/DestinationDetails";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/about" element={<About />} /> */}
         <Route path="/home" element={<Home />} />
+        <Route path="/destination-details" element={<DestinationDetails />} />
 
         {browserRoutes.map(item => <Route key={item.id} path={item.path} element={item.element} />)}
 

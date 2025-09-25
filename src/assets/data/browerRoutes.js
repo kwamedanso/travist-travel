@@ -25,13 +25,14 @@ const browserRoutes = [
         title: 'Pricing'
 
     },
-    {
-        id: 4,
-        path: '/contact',
-        element: <Contact />,
-        title: 'Contact'
+    // {
+    //     id: 4,
+    //     path: '/contact',
+    //     element: <Contact />,
+    //     title: 'Contact'
 
-    },
+    // },
+
 ]
 
 export default browserRoutes

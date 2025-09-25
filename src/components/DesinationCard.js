@@ -1,6 +1,6 @@
-import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
 import { FaLocationDot } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 export default function DesinationCard(props) {
     return (
@@ -24,7 +24,7 @@ export default function DesinationCard(props) {
                         <FaLocationDot className='location-icon' />
                         <span className='fs-100'>{props.location}</span>
                     </p>
-                    <button className='button discover-btn fs-200'>Discover</button>
+                    <Link to={"/destination-details"} state={props.location} className='button discover-btn fs-200'>Discover</Link>
                 </div>
             </div>
         </>
