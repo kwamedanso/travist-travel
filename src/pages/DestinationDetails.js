@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
     FaStar, FaMapMarkerAlt, FaClock, FaUsers, FaCalendarAlt, FaChevronDown, FaChevronUp, FaCheck, FaHeart, FaRegHeart, FaShare, FaCamera, FaTimes
 } from 'react-icons/fa';
@@ -14,7 +14,10 @@ const DestinationDetails = () => {
     const [isFavorite, setIsFavorite] = useState(false);
 
     const location = useLocation()
-    console.log()
+
+    useEffect(() => {
+        window.scroll(0, 0)
+    }, [])
 
     const destination = {
         name: "Santorini, Greece",
